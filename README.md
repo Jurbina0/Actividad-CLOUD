@@ -76,3 +76,57 @@ archivo Swagger: documentación del API.
   Interactivo: https://editor.swagger.io/ 
 Proceso batch y no batch
 
+---
+
+**Amazon S3 Bucket**
+
+- nombre: glue-inmobiliaria-bucket-1
+- availability zone: N.virginia us-east-1
+- enable bucket versioning
+
+Estructura del folder
+
+data_landing_zone - load-20250102
+
+**Amazon Glue**
+
+Connection to MySQL ya que María usa MySQL Workbench
+
+**Amazon IAM**
+
+nuevo rol con la configuración que sigue
+- name: glue-inmobiliaria-role
+- use case: Glue
+- allowed policies: AmazonS3FullAccess, CloudWatchLogsFullAccess, GlueConsoleFullAccess
+
+Error a la hora de crear el rol:
+Analysis
+The error is caused by insufficient permissions configured for the principal arn:aws:iam::258567897508:role/voclabs.
+Resolution
+Try the following steps to resolve your error:
+
+
+Navigate to the IAM console, and then navigate to the voclabs role.
+Choose the Permissions tab, and then choose Add permissions.
+Choose the Create inline policy option.
+Navigate to the JSON tab in the policy editor.
+Copy and paste the following policy document into the policy editor. This policy document is a starting point, and you might want to add more permissions. Edit the "Action" and "Resource" fields to match the specific actions and resources required for your use case:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateRole"
+            ],
+            "Resource": [
+                "arn:aws:iam::258567897508:role/glue-inmobiliaria-role"
+            ]
+        }
+    ]
+}
+Review the updated policy for correctness, and then choose Next.
+Input the policy name, review the permissions defined in the policy, and then choose Create Policy to create the inline policy.
+By following these steps, you can grant the necessary permissions to the voclabs role to perform iam:CreateRole on the resource arn:aws:iam::258567897508:role/glue-inmobiliaria-role.
+
+Note: If the action doesn't support resource level permissions, you can use star * in the resource field.
