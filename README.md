@@ -1,5 +1,9 @@
 # Actividad-CLOUD
 Repositorio privado para el desarrollo y ejecución de la actividad Actividad CLOUD asociada a la asignatura Análisis de datos en entornos Big Data. Miembros: María Correas Crespo y Judith Urbina.
+El conjunto de datos elegido proviene de:
+
+https://www.kaggle.com/datasets/oktayrdeki/houses-in-london?resource=download 
+
 
 Enlace al overleaf:
 https://www.overleaf.com/7431459492vshwjsngbdmn#16858d
