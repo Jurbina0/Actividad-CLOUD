@@ -1,0 +1,34 @@
+Información general del proyecto 
+
+Servicios a configurar:
+- S3
+- RDS
+- Glue
+- Lambda
+- VPC
+- IAM
+- Secrets Manager 
+
+
+Desglose por servicio: 
+S3: 
+- Crear bucket 
+- Subir fichero datos a bucket 
+
+RDS:
+- Crear base de datos RDS-  configurar vpc y security groups
+- Almacenar credenciales de acceso en secrets mnanager 
+
+Glue: 
+- Crear crawler 
+- Crear esquema en glue data catalog 
+- crear conexion a la base de datos jdbc
+- Crear Glue Job que procese los datos
+
+
+
+Lambda:
+- Crear funcion lambda-  vpc, rol con permisos secrets manager, rds 
+
+Api Gateway: 
+- Crear api gateway, metodos conectarlo a lambda

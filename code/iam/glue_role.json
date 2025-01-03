@@ -1,0 +1,52 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Action": [
+          "s3:GetObject",
+          "s3:ListBucket"
+        ],
+        "Resource": [
+          "arn:aws:s3:::<nombre-del-bucket-s3>",
+          "arn:aws:s3:::<nombre-del-bucket-s3>/*"
+        ]
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "rds:DescribeDBInstances",
+          "rds:Connect"
+        ],
+        "Resource": "arn:aws:rds:<region>:<account-id>:db:<nombre-de-la-base-de-datos>"
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "logs:CreateLogGroup",
+          "logs:CreateLogStream",
+          "logs:PutLogEvents"
+        ],
+        "Resource": "arn:aws:logs:<region>:<account-id>:log-group:/aws/glue/*"
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "glue:CreateJob",
+          "glue:DeleteJob",
+          "glue:UpdateJob",
+          "glue:StartJobRun",
+          "glue:GetJob",
+          "glue:GetJobRun",
+          "glue:GetTable",
+          "glue:GetTables",
+          "glue:BatchCreatePartition",
+          "glue:BatchDeletePartition",
+          "glue:GetPartition",
+          "glue:GetPartitions",
+          "glue:UpdateTable"
+        ],
+        "Resource": "*"
+      }
+    ]
+  }
