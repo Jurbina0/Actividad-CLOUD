@@ -1,40 +1,34 @@
-import mysql.connector
-db_connection = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="PROPILENO24a",  # Sustituye por tu contraseña
-    database="inmobiliaria"
-)
+import pymysql
+import json
+import datetime
 
-cursor = db_connection.cursor()
+# Database connection configuration
+db_host = "localhost"
+db_user = "root"
+db_password = "PROPILENO24a"
+db_name = "inmobiliaria"
 
-# SQL para crear la tabla
-create_table_query = """
-CREATE TABLE IF NOT EXISTS propiedades (
-    id_vivienda INT PRIMARY KEY,
-    direccion VARCHAR(255),
-    vecindario VARCHAR(255),
-    n_dormitorios INT,
-    n_banos INT,
-    tamano INT,
-    edad_vivienda INT,
-    hay_jardin BOOLEAN,
-    hay_garaje BOOLEAN,
-    n_plantas INT,
-    tipo_vivienda VARCHAR(50),
-    tipo_calefaccion VARCHAR(50),
-    tipo_hay_terraza VARCHAR(50),
-    tipo_decorado VARCHAR(50),
-    tipo_vistas VARCHAR(50),
-    tipo_materiales VARCHAR(50),
-    estado_vivienda VARCHAR(50),
-    precio_pounds FLOAT,
-    fecha_creacion DATE,
-    fecha_modificacion DATE,
-    fecha_baja DATE
-);
-"""
-cursor.execute(create_table_query)
-db_connection.commit()
+def get_db_connection():
+    """Create a connection to the MySQL database."""
+    connection = pymysql.connect(
+        host=db_host,
+        user=db_user,
+        password=db_password,
+        database=db_name,
+        connect_timeout=5
+    )
+    return connection
 
-print("Tabla vivienda creada con éxito.")
+def insert_viviendas(df):
+    try:
+        # Open a database connection
+        connection = get_db_connection()
+        cursor = connection.cursor()
+        query = "algo"
+        cursor.execute(query)
+        connection.close()
+    except Exception as e:
+        print("Error connecting to the database: ", e)
+        return None, None
+connection = insert_viviendas()
+print("Connection: ", connection)

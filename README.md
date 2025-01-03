@@ -134,3 +134,16 @@ Input the policy name, review the permissions defined in the policy, and then ch
 By following these steps, you can grant the necessary permissions to the voclabs role to perform iam:CreateRole on the resource arn:aws:iam::258567897508:role/glue-inmobiliaria-role.
 
 Note: If the action doesn't support resource level permissions, you can use star * in the resource field.
+
+---
+
+Next Steps:
+
+Judith
+- Corregir ETL (dos campos)
+- Insertar desde un python a la base de datos el CSV
+
+Maria:
+- Avances en el overleaf
+- Roles
+- Conectar Base de datos SQL AWS y arreglar instancias
