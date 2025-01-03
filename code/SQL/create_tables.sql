@@ -2,8 +2,8 @@
 USE inmobiliaria;
 
 # Creamos la tabla usuarios
-CREATE TABLE usuarios (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS usuarios (
+    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255),
     apellido1 VARCHAR(255),
     apellido2 VARCHAR(255) NULL,  
@@ -14,6 +14,7 @@ CREATE TABLE usuarios (
     fecha_baja DATETIME NULL  
 );
 
+# Creamos la tabla viviendas
 CREATE TABLE IF NOT EXISTS viviendas (
     id_vivienda INT AUTO_INCREMENT PRIMARY KEY,
     direccion VARCHAR(255),
@@ -37,4 +38,28 @@ CREATE TABLE IF NOT EXISTS viviendas (
     fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
     fecha_modificacion DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     fecha_baja DATETIME NULL
+);
+
+# Creamos la tabla viviendas_favoritas
+CREATE TABLE IF NOT EXISTS viviendas_favoritas (
+    id_favorita INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT,
+    id_vivienda INT,
+    fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
+    fecha_modificacion DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    fecha_baja DATETIME NULL,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_vivienda) REFERENCES viviendas(id_vivienda) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+# Creamos la tabla historico_precios
+CREATE TABLE IF NOT EXISTS historico_precios (
+    id_precio INT AUTO_INCREMENT PRIMARY KEY,
+    id_vivienda INT,
+    precio_pounds FLOAT,
+    fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
+    fecha_modificacion DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    fecha_baja DATETIME NULL,
+    FOREIGN KEY (id_vivienda) REFERENCES viviendas(id_vivienda) ON DELETE CASCADE ON UPDATE CASCADE
 );
