@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2" pages="3">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.1 Chrome/128.0.6613.186 Electron/32.2.6 Safari/537.36" version="25.0.1" pages="3">
   <diagram name="Arquitectura" id="ku7HdrZrzYCy2qS9Qck7">
     <mxGraphModel dx="1674" dy="870" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -81,7 +81,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="LyAtiCV3XTXp81cUvUKb" name="Modelo de Datos">
-    <mxGraphModel dx="1861" dy="477" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1514" dy="713" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -166,10 +166,10 @@
         <mxCell id="h7ColWvY5arZydpKHJJL-15" value="fecha_creacion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="h7ColWvY5arZydpKHJJL-12" vertex="1">
           <mxGeometry y="120" width="230" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="tMK6Zo_Qw5x6Wni6N9DD-1" value="fecha_modificacion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="h7ColWvY5arZydpKHJJL-12">
+        <mxCell id="tMK6Zo_Qw5x6Wni6N9DD-1" value="fecha_modificacion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="h7ColWvY5arZydpKHJJL-12" vertex="1">
           <mxGeometry y="150" width="230" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="tMK6Zo_Qw5x6Wni6N9DD-2" value="fecha_baja" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="h7ColWvY5arZydpKHJJL-12">
+        <mxCell id="tMK6Zo_Qw5x6Wni6N9DD-2" value="fecha_baja" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="h7ColWvY5arZydpKHJJL-12" vertex="1">
           <mxGeometry y="180" width="230" height="30" as="geometry" />
         </mxCell>
         <mxCell id="h7ColWvY5arZydpKHJJL-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="h7ColWvY5arZydpKHJJL-14" target="h7ColWvY5arZydpKHJJL-2" edge="1">
@@ -208,7 +208,7 @@
         <mxCell id="h7ColWvY5arZydpKHJJL-27" value="viviendas_favoritas" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-110" y="140" width="186" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="h7ColWvY5arZydpKHJJL-28" value="id_preferencia (PK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="h7ColWvY5arZydpKHJJL-27" vertex="1">
+        <mxCell id="h7ColWvY5arZydpKHJJL-28" value="id_favorita (PK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="h7ColWvY5arZydpKHJJL-27" vertex="1">
           <mxGeometry y="30" width="186" height="30" as="geometry" />
         </mxCell>
         <mxCell id="h7ColWvY5arZydpKHJJL-29" value="id_usuario (FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="h7ColWvY5arZydpKHJJL-27" vertex="1">
@@ -244,7 +244,7 @@
         <mxCell id="_RV90nyYSpRuEgIRjfCO-12" value="precio_dollar" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="_RV90nyYSpRuEgIRjfCO-8" vertex="1">
           <mxGeometry y="90" width="230" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="G2T9hIL1Bh_ekqK3w9lX-3" value="campos a calcular:&amp;nbsp;&lt;div&gt;-&amp;nbsp; edad vivienda -&amp;gt; ano_construccion&lt;/div&gt;&lt;div&gt;-&amp;nbsp; precio/ tamano -&amp;gt; precio_metro_cuadrado&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="G2T9hIL1Bh_ekqK3w9lX-3" value="campos a calcular:&amp;nbsp;&lt;div&gt;-&amp;nbsp; edad vivienda -&amp;gt; ano_construccion&lt;/div&gt;&lt;div&gt;-&amp;nbsp; precio/ tamano -&amp;gt; precio_metro_cuadrado&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="890" y="400" width="310" height="230" as="geometry" />
         </mxCell>
       </root>

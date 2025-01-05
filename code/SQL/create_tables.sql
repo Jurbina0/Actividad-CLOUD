@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
     apellido1 VARCHAR(255),
     apellido2 VARCHAR(255) NULL,  
     email VARCHAR(255),
-    consentimiento BOOLEAN,
+    recibir_emails BOOLEAN,
     fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,  
     fecha_modificacion DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,  
     fecha_baja DATETIME NULL  
