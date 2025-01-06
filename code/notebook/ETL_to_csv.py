@@ -35,22 +35,27 @@ df['hay_garaje'] = df['hay_garaje'].map({
     'Yes': True,
     'No': False
 })
-
-df['tipo_hay_terraza'] = df['tipo_hay_terraza'].astype('category')
-def convert_to_category(df, colname):
-    df[colname] = df[colname].astype('category')
-    return None
-convert_to_category(df, 'tipo_vivienda')
-convert_to_category(df, 'tipo_calefaccion')
-convert_to_category(df, 'tipo_decorado')
-convert_to_category(df, 'tipo_vistas')
-convert_to_category(df, 'tipo_materiales')
-convert_to_category(df, 'estado_vivienda')
+print(df.dtypes)
+# convertimos
+for colname in ['tipo_hay_terraza','tipo_vivienda','tipo_calefaccion','tipo_decorado', 'tipo_vistas','tipo_materiales', 'estado_vivienda']:
+    df[colname].astype('category')
 df['precio_pounds'] = df['precio_pounds'].astype('float')
 # addicionamos la fecha de creación
 df['fecha_creacion'] = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
 # addicionamos dos columnas vacías
 df['fecha_modificacion'] = None
 df['fecha_baja'] = None
+# miramos resultados
+print(df.tail())
+# añadimos la columna para el año de construcción
+df['ano_construccion'] = datetime.today().year
+# restamos la edad que tiene el edificio para saber el año en que fue construido
+df['ano_construccion'] = df['ano_construccion'] - df['edad_vivienda']
+# eliminamos la columna de edad de la vivienda
+df.drop('edad_vivienda', axis=1, inplace=True)
+# calculamos precio por metros cuadrados
+df['precio_metro_cuadrado'] = df['precio_pounds']/df['tamano']
+# redondeamos a un decimal por precio round
+df['precio_metro_cuadrado'] = df['precio_metro_cuadrado'].round(1)
 # guardamos el dataframe en un csv
 df.to_csv('data/london_houses_clean.csv', index=False)

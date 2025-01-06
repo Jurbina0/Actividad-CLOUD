@@ -96,6 +96,28 @@ print(df.describe())
 # en global
 print(df.isnull().sum())
 print(df.dtypes)
+
+# añadimos la columna para el año de construcción
+df['ano_construccion'] = datetime.today().year
+# restamos la edad que tiene el edificio para saber el año en que fue construido
+df['ano_construccion'] = df['ano_construccion'] - df['edad_vivienda']
+# comprobamos
+print(df.tail())
+# eliminamos la columna de edad de la vivienda
+df.drop('edad_vivienda', axis=1, inplace=True)
+# comprobamos
+print(df.tail())
+# miramos valores de los metros cuadrados y el precio
+print(df[['precio_pounds','tamano']])
+# calculamos precio por metros cuadrados
+df['precio_metro_cuadrado'] = df['precio_pounds']/df['tamano']
+# comprobamos
+print(df[['precio_pounds','tamano','precio_metro_cuadrado']])
+# redondeamos a un decimal por precio round
+df['precio_metro_cuadrado'] = df['precio_metro_cuadrado'].round(1)
+# comprobamos
+print(df[['precio_pounds','tamano','precio_metro_cuadrado']])
+
 # guardamos el dataframe en un csv
 df.to_csv('data/london_houses_clean.csv', index=False)
 

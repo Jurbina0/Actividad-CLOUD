@@ -81,12 +81,12 @@
     </mxGraphModel>
   </diagram>
   <diagram id="LyAtiCV3XTXp81cUvUKb" name="Modelo de Datos">
-    <mxGraphModel dx="1514" dy="713" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1413" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="h7ColWvY5arZydpKHJJL-1" value="viviendas" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="154" y="140" width="260" height="660" as="geometry" />
+          <mxGeometry x="154" y="140" width="260" height="690" as="geometry" />
         </mxCell>
         <mxCell id="h7ColWvY5arZydpKHJJL-2" value="id_vivienda&amp;nbsp; (PK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="h7ColWvY5arZydpKHJJL-1" vertex="1">
           <mxGeometry y="30" width="260" height="30" as="geometry" />
@@ -150,6 +150,9 @@
         </mxCell>
         <mxCell id="h7ColWvY5arZydpKHJJL-5" value="fecha_baja" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="h7ColWvY5arZydpKHJJL-1" vertex="1">
           <mxGeometry y="630" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B1rhPE3I9xytFw2tLOt5-1" value="precio_metro_cuadrado" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="h7ColWvY5arZydpKHJJL-1">
+          <mxGeometry y="660" width="260" height="30" as="geometry" />
         </mxCell>
         <mxCell id="h7ColWvY5arZydpKHJJL-12" value="historico_precios" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="530" y="140" width="230" height="210" as="geometry" />
@@ -233,7 +236,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="_RV90nyYSpRuEgIRjfCO-8" value="métricas" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" parent="1" vertex="1">
-          <mxGeometry x="470" y="650" width="230" height="120" as="geometry" />
+          <mxGeometry x="480" y="520" width="230" height="150" as="geometry" />
         </mxCell>
         <mxCell id="_RV90nyYSpRuEgIRjfCO-10" value="&amp;nbsp;precio_pound" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="_RV90nyYSpRuEgIRjfCO-8" vertex="1">
           <mxGeometry y="30" width="230" height="30" as="geometry" />
@@ -243,6 +246,9 @@
         </mxCell>
         <mxCell id="_RV90nyYSpRuEgIRjfCO-12" value="precio_dollar" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="_RV90nyYSpRuEgIRjfCO-8" vertex="1">
           <mxGeometry y="90" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B1rhPE3I9xytFw2tLOt5-2" value="promedio metros cuadrados por habitaci:on" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="_RV90nyYSpRuEgIRjfCO-8">
+          <mxGeometry y="120" width="230" height="30" as="geometry" />
         </mxCell>
         <mxCell id="G2T9hIL1Bh_ekqK3w9lX-3" value="campos a calcular:&amp;nbsp;&lt;div&gt;-&amp;nbsp; edad vivienda -&amp;gt; ano_construccion&lt;/div&gt;&lt;div&gt;-&amp;nbsp; precio/ tamano -&amp;gt; precio_metro_cuadrado&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="890" y="400" width="310" height="230" as="geometry" />
