@@ -1,0 +1,198 @@
+{
+	"dag": {
+		"node-1736255733043": {
+			"classification": "DataSource",
+			"type": "S3",
+			"name": "Amazon S3",
+			"inputs": [],
+			"isCatalog": false,
+			"recurse": true,
+			"paths": [
+				"s3://glue-inmobiliaria-bucket-1/data_landing_zone/load_date=20250102/london_houses.csv"
+			],
+			"additionalOptions": {
+				"enableSamplePath": false,
+				"samplePath": "s3://glue-inmobiliaria-bucket-1/data_landing_zone/load_date=20250102/london_houses.csv"
+			},
+			"inferSchemaChanged": false,
+			"format": "csv",
+			"iconUrl": "https://a.b.cdn.console.awsstatic.com/a/v1/SOF3P4R227EDWNHON2KNU5PFZIIT7PCVMSGDUYWWYLJHOL7G5H4A/static/media/s3.2a166713.svg",
+			"generatedNodeName": "AmazonS3_node1736255733043",
+			"codeGenVersion": 2,
+			"separator": ",",
+			"quoteChar": "\"",
+			"withHeader": true,
+			"escaper": "",
+			"outputSchemas": [
+				[
+					{
+						"key": "Address",
+						"fullPath": [
+							"Address"
+						],
+						"type": "string"
+					},
+					{
+						"key": "Neighborhood",
+						"fullPath": [
+							"Neighborhood"
+						],
+						"type": "string"
+					},
+					{
+						"key": "Bedrooms",
+						"fullPath": [
+							"Bedrooms"
+						],
+						"type": "string"
+					},
+					{
+						"key": "Bathrooms",
+						"fullPath": [
+							"Bathrooms"
+						],
+						"type": "string"
+					},
+					{
+						"key": "Square Meters",
+						"fullPath": [
+							"Square Meters"
+						],
+						"type": "string"
+					},
+					{
+						"key": "Building Age",
+						"fullPath": [
+							"Building Age"
+						],
+						"type": "string"
+					},
+					{
+						"key": "Garden",
+						"fullPath": [
+							"Garden"
+						],
+						"type": "string"
+					},
+					{
+						"key": "Garage",
+						"fullPath": [
+							"Garage"
+						],
+						"type": "string"
+					},
+					{
+						"key": "Floors",
+						"fullPath": [
+							"Floors"
+						],
+						"type": "string"
+					},
+					{
+						"key": "Property Type",
+						"fullPath": [
+							"Property Type"
+						],
+						"type": "string"
+					},
+					{
+						"key": "Heating Type",
+						"fullPath": [
+							"Heating Type"
+						],
+						"type": "string"
+					},
+					{
+						"key": "Balcony",
+						"fullPath": [
+							"Balcony"
+						],
+						"type": "string"
+					},
+					{
+						"key": "Interior Style",
+						"fullPath": [
+							"Interior Style"
+						],
+						"type": "string"
+					},
+					{
+						"key": "View",
+						"fullPath": [
+							"View"
+						],
+						"type": "string"
+					},
+					{
+						"key": "Materials",
+						"fullPath": [
+							"Materials"
+						],
+						"type": "string"
+					},
+					{
+						"key": "Building Status",
+						"fullPath": [
+							"Building Status"
+						],
+						"type": "string"
+					},
+					{
+						"key": "Price (£)",
+						"fullPath": [
+							"Price (£)"
+						],
+						"type": "string"
+					}
+				]
+			]
+		},
+		"node-1736256024914": {
+			"classification": "Transform",
+			"type": "CustomCode",
+			"name": "Custom Transform",
+			"inputs": [
+				"node-1736255733043"
+			],
+			"className": "MyTransform",
+			"code": "",
+			"iconUrl": "https://a.b.cdn.console.awsstatic.com/a/v1/SOF3P4R227EDWNHON2KNU5PFZIIT7PCVMSGDUYWWYLJHOL7G5H4A/static/media/Custom-transform.8e905ecc.svg",
+			"generatedNodeName": "CustomTransform_node1736256024914",
+			"codeGenVersion": 2
+		}
+	},
+	"jobConfig": {
+		"command": "glueetl",
+		"description": "",
+		"role": "arn:aws:iam::258567897508:role/LabRole",
+		"scriptName": "ETL Python Spark.py",
+		"version": "5.0",
+		"language": "python-3",
+		"scriptLocation": "s3://aws-glue-assets-258567897508-us-east-1/scripts/",
+		"temporaryDirectory": "s3://aws-glue-assets-258567897508-us-east-1/temporary/",
+		"timeout": 480,
+		"maxConcurrentRuns": 1,
+		"workerType": "G.1X",
+		"numberOfWorkers": 10,
+		"maxRetries": 0,
+		"metrics": true,
+		"observabilityMetrics": true,
+		"security": "none",
+		"bookmark": "job-bookmark-enable",
+		"logging": true,
+		"spark": true,
+		"sparkConfiguration": "standard",
+		"sparkPath": "s3://aws-glue-assets-258567897508-us-east-1/sparkHistoryLogs/",
+		"serverEncryption": false,
+		"glueHiveMetastore": true,
+		"etlAutoScaling": false,
+		"etlAutoTuning": true,
+		"jobParameters": [],
+		"tags": [],
+		"connectionsList": [],
+		"jobMode": "VISUAL_MODE",
+		"name": "ETL Python Spark",
+		"pythonPath": ""
+	},
+	"hasBeenSaved": false
+}
