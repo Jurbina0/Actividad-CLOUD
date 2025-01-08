@@ -141,6 +141,7 @@ Next Steps:
 
 Judith
 - Corregir ETL (dos campos)
+- Modificar ETL para hacerlo con Spark
 - Insertar desde un python a la base de datos el CSV
 
 Maria:

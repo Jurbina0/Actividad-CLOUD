@@ -45,6 +45,13 @@ df['fecha_creacion'] = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
 # addicionamos dos columnas vacías
 df['fecha_modificacion'] = None
 df['fecha_baja'] = None
+# cambiamos a NULL para que sea compatible con la base de datos
+df['fecha_modificacion'] = df['fecha_modificacion'].map({
+    None: 'NULL'
+})
+df['fecha_baja'] = df['fecha_baja'].map({
+    None: 'NULL'
+})
 # miramos resultados
 print(df.tail())
 # añadimos la columna para el año de construcción
