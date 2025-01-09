@@ -45,15 +45,6 @@ df['fecha_creacion'] = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
 # addicionamos dos columnas vacías
 df['fecha_modificacion'] = None
 df['fecha_baja'] = None
-# cambiamos a NULL para que sea compatible con la base de datos
-df['fecha_modificacion'] = df['fecha_modificacion'].map({
-    None: 'NULL'
-})
-df['fecha_baja'] = df['fecha_baja'].map({
-    None: 'NULL'
-})
-# miramos resultados
-print(df.tail())
 # añadimos la columna para el año de construcción
 df['ano_construccion'] = datetime.today().year
 # restamos la edad que tiene el edificio para saber el año en que fue construido
@@ -66,3 +57,13 @@ df['precio_metro_cuadrado'] = df['precio_pounds']/df['tamano']
 df['precio_metro_cuadrado'] = df['precio_metro_cuadrado'].round(1)
 # guardamos el dataframe en un csv
 df.to_csv('data/london_houses_clean.csv', index=False)
+
+"""
+# cambiamos a NULL para que sea compatible con la base de datos
+df['fecha_modificacion'] = df['fecha_modificacion'].map({
+    None: 'NULL'
+})
+df['fecha_baja'] = df['fecha_baja'].map({
+    None: 'NULL'
+})
+"""
