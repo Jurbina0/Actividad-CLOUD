@@ -142,6 +142,9 @@ Next Steps:
 Judith
 - Corregir ETL (dos campos)
 - Modificar ETL para hacerlo con Spark
+
+primero se ejecuta el producer y luego el consumer
+
 - Insertar desde un python a la base de datos el CSV
 
 Maria:

@@ -22,7 +22,6 @@ CREATE TABLE IF NOT EXISTS viviendas (
     n_dormitorios INT,
     n_banos INT,
     tamano INT,
-    ano_construccion INT,
     hay_jardin BOOLEAN,
     hay_garaje BOOLEAN,
     n_plantas INT,
@@ -34,10 +33,11 @@ CREATE TABLE IF NOT EXISTS viviendas (
     tipo_materiales VARCHAR(50),
     estado_vivienda VARCHAR(50),
     precio_pounds FLOAT,
-    precio_metro_cuadrado FLOAT,
     fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
     fecha_modificacion DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    fecha_baja DATETIME NULL
+    fecha_baja DATETIME NULL,
+    ano_construccion INT,
+    precio_metro_cuadrado FLOAT
 );
 
 # Creamos la tabla viviendas_favoritas

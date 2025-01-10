@@ -35,7 +35,6 @@ df['hay_garaje'] = df['hay_garaje'].map({
     'Yes': True,
     'No': False
 })
-print(df.dtypes)
 # convertimos
 for colname in ['tipo_hay_terraza','tipo_vivienda','tipo_calefaccion','tipo_decorado', 'tipo_vistas','tipo_materiales', 'estado_vivienda']:
     df[colname].astype('category')
