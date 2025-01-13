@@ -78,3 +78,8 @@ print("Esperando mensajes...")
 for message in consumer:
     row = message.value
     insert_row(row)
+
+print("Fin de insertar.")
+
+# Cerramos el consumidor
+consumer.close()

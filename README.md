@@ -149,5 +149,22 @@ primero se ejecuta el producer y luego el consumer
 
 Maria:
 - Avances en el overleaf
-- Roles
+- Roles: DESCARTADO
 - Conectar Base de datos SQL AWS y arreglar instancias
+
+----
+
+Judith
+
+1. cambiar el final de la ETL (en vez de S3 ingeste a base de datos) para que
+   1. los datos que salen que vayan a la tabla viviendas
+   2. son code local spark
+2. actualizar historicos_precios id_viviendas = id
+3. añadir capturas en el overleaf de las validaciones
+
+María
+1. crear base de datos RDS dentro de instancia
+2. crear Lambda con código API
+3. revisar secrets manager
+
+

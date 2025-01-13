@@ -17,7 +17,7 @@ def get_db_connection():
         connect_timeout=5
     )
 
-
+# insertar una fila en la base de datos
 def insert_row(values):
     try:
         # Abrir conexión a la base de datos
@@ -62,5 +62,4 @@ VALUES (
         connection.close()
 
 # values ejemplo
-
 insertion = insert_row(('18 Regent Street', 'Soho', 5, 3, 168, False, True, 3, 'Semi-Detached', 'Central Heating', 'No Balcony', 'Industrial', 'Street', 'Wood', 'Renovated', 1881600.0, '2025-01-10 09:28:43', 1987, 11200.0))
