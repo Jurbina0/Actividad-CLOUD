@@ -12,8 +12,8 @@ Servicios a configurar:
 
 Desglose por servicio: 
 S3: 
-- Crear bucket 
-- Subir fichero datos a bucket 
+- bucket_name: m6-inmobiliaria-jm
+- folders:  
 
 RDS:
 - Crear base de datos RDS-  configurar vpc y security groups
@@ -32,3 +32,6 @@ Lambda:
 
 Api Gateway: 
 - Crear api gateway, metodos conectarlo a lambda
+
+Secrets Manager 
+- crear y guardar conexiones a la bd

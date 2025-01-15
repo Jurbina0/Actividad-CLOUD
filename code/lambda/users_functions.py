@@ -27,7 +27,7 @@ def get_user(conn, user_id):
                     apellido1, 
                     apellido2, 
                     email, 
-                    consentimiento, 
+                    recibir_emails, 
                     fecha_creacion, 
                     fecha_modificacion,
                     fecha_baja 
@@ -53,7 +53,7 @@ def get_user(conn, user_id):
                     "apellido1": result[2],
                     "apellido2": result[3] if result[3] is not None else None,  
                     "email": result[4],
-                    "consentimiento": str(result[5]),
+                    "recibir_emails": str(result[5]),
                     "fecha_creacion": result[6].strftime('%Y-%m-%d %H:%M:%S'),
                     "fecha_modificacion": result[7].strftime('%Y-%m-%d %H:%M:%S'), 
                     "fecha_baja": result[8].strftime('%Y-%m-%d %H:%M:%S') if result[8] else None  
@@ -91,7 +91,7 @@ def get_users(conn):
                             apellido1, 
                             apellido2, 
                             email, 
-                            consentimiento, 
+                            recibir_emails, 
                             fecha_creacion, 
                             fecha_modificacion,
                             fecha_baja 
@@ -107,7 +107,7 @@ def get_users(conn):
                             "apellido1": result[2],
                             "apellido2": result[3] if result[3] is not None else None,  
                             "email": result[4],
-                            "consentimiento": str(result[5]),
+                            "recibir_emails": str(result[5]),
                             "fecha_creacion": result[6].strftime('%Y-%m-%d %H:%M:%S'),
                             "fecha_modificacion": result[7].strftime('%Y-%m-%d %H:%M:%S'), 
                             "fecha_baja": result[8].strftime('%Y-%m-%d %H:%M:%S') if result[8] else None } for result in query_results]
@@ -134,14 +134,14 @@ def add_user(conn, body):
         apellido1 = body.get('apellido1')
         apellido2 = body.get('apellido2')
         email = body.get('email')
-        consentimiento = body.get('consentimiento')
+        consentimiento = body.get('recibir_emails')
 
         # Open a database connection
         with conn as connection:
             with connection.cursor() as cursor:
 
                 # SQL query to insert a new user into the table
-                query = """INSERT INTO usuarios (nombre, apellido1, apellido2, email, consentimiento)
+                query = """INSERT INTO usuarios (nombre, apellido1, apellido2, email, recibir_emails)
                         VALUES (%s, %s, %s, %s, %s);"""
                 cursor.execute(query, (nombre, apellido1, apellido2, email, consentimiento))
                 connection.commit()
@@ -164,7 +164,7 @@ def update_user(conn, user_id, body):
     """
     try:
         # Validate input fields
-        required_fields = ['nombre', 'apellido1', 'apellido2', 'email', 'consentimiento']
+        required_fields = ['nombre', 'apellido1', 'apellido2', 'email', 'recibir_emails']
         missing_fields = [field for field in required_fields if field not in body]
 
         if missing_fields:
@@ -178,7 +178,7 @@ def update_user(conn, user_id, body):
         apellido1 = body.get('apellido1')
         apellido2 = body.get('apellido2')
         email = body.get('email')
-        consentimiento = body.get('consentimiento')
+        consentimiento = body.get('recibir_emails')
 
         # Open a database connection
         with conn as connection:
@@ -186,7 +186,7 @@ def update_user(conn, user_id, body):
                 # SQL query to update user information
                 query = """
                 UPDATE usuarios
-                SET nombre = %s, apellido1 = %s, apellido2 = %s, email = %s, consentimiento = %s
+                SET nombre = %s, apellido1 = %s, apellido2 = %s, email = %s, recibir_emails = %s
                 WHERE id_usuario = %s;
                 """
                 cursor.execute(query, (nombre, apellido1, apellido2, email, consentimiento, user_id))

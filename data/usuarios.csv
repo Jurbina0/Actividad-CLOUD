@@ -1,0 +1,4 @@
+id_usuario,nombre,apellido1,apellido2,email,consentimiento,fecha_creacion,fecha_modificacion,fecha_baja
+1,Juan,Pérez,Gómez,juan.perez@example.com,true,2023-01-01 12:00:00,2023-01-01 12:00:00,
+2,Maria,Lopez,,maria.lopez@example.com,false,2023-01-02 14:30:00,2023-01-02 14:30:00,
+3,Carlos,Rodríguez,Morales,carlos.rodriguez@example.com,true,2023-01-03 10:00:00,2023-01-03 10:00:00,
