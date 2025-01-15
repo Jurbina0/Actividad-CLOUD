@@ -5,18 +5,21 @@ db_password = "PROPILENO24a"
 db_name = "inmobiliaria"
 
 def get_db_connection():
-    """Create a connection to the MySQL database."""
-    connection = pymysql.connect(
-        host=db_host,
-        user=db_user,
-        password=db_password,
-        database=db_name,
-        connect_timeout=5
-    )
-    return connection
-connection = get_db_connection()
+    """Connect to MySQL database."""
+    try:
+        print("Connecting to DataBase...")
+        return pymysql.connect(
+            host=db_host,
+            user=db_user,
+            password=db_password,
+            database=db_name
+        )
+    except Exception as e:
+        print(f"Error connecting to DataBase: {e}")
+        return None
+con = get_db_connection()
 try:
-    with connection.cursor() as cursor:
+    with con.cursor() as cursor:
         cursor.execute("SELECT VERSION()")
         data = cursor.fetchone()
         cursor.execute("SHOW TABLES")
@@ -43,5 +46,5 @@ try:
         print(afterrow)
         
 finally:
-    connection.commit()
-    connection.close()
+    con.commit()
+    con.close()

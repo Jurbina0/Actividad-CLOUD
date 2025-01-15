@@ -29,6 +29,7 @@ def insert_row(row):
     try:
         connection = get_db_connection()
         cursor = connection.cursor()
+        # Insertamos en la tabla viviendas
         insert_query = """
             INSERT INTO viviendas (
                 direccion, vecindario, n_dormitorios, n_banos, tamano, hay_jardin,

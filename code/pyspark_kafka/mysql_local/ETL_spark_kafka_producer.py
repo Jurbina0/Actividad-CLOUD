@@ -4,8 +4,9 @@ from datetime import datetime
 # Necesarios para kafka
 from kafka import KafkaProducer
 import json
-# a modo local es necesario abrir dos terminales
+# a modo local es necesario abrir dos terminales y estar en la carpeta bin de kafka y ejecutar los siguientes comandos
 """
+cd C:\kafka\bin\windows
 .\zookeeper-server-start.bat ..\..\config\zookeeper.properties
 .\kafka-server-start.bat ..\..\config\server.properties
 """

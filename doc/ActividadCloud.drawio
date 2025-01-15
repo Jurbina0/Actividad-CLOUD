@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.4 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.4" pages="3">
   <diagram name="Arquitectura" id="ku7HdrZrzYCy2qS9Qck7">
-    <mxGraphModel dx="597" dy="609" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="718" dy="713" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -77,14 +77,14 @@
         <mxCell id="E9zFwwlyVpGi6Gsaa6fp-20" value="" style="dashed=0;html=1;shape=mxgraph.aws3.virtual_private_cloud;fillColor=#F58536;gradientColor=none;dashed=0;" parent="1" vertex="1">
           <mxGeometry x="221.25" y="220" width="52" height="36" as="geometry" />
         </mxCell>
-        <mxCell id="nh0OFHoUS6rO17LHTK2p-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/png,iVBORw0KGgoAAAANSUhEUgAAASUAAACVCAMAAAApBByEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACiUExURQAAAACjpQCkpv///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wCkp5eLx+UAAAA2dFJOUwCA/3//nQvq+01Q3hEGM/ceyWL1cjLm36fDLa/XbRiIvUCXJeK41ESiRzpmg7rbtmGZXbPQv5Dg3k8AAAAJcEhZcwAAFxEAABcRAcom8z8AAAToSURBVHhe7Zp7f9M2FIaTxbQhLCtdGuqUbWxQoBu7su37f7W95yJbyqU+tckv9fo+fwRbciSdx0ey3DCZTKZftUxxrrDQYCFgofGlCgkh5PEwnXJx6gZruB+Rw4gl5lMXYon51AUtRaClCLQUgZYi0FIEWopASxFoKYLsu2kpAi1F4Hvc8ZlV1TM/PMzZ+fx5+ixZVC++9kOQX5euXn6jVVssqpaLl174aFleVkWc+xlg6dvVldWVjMvSevXqutobxy7dloz8OtyF+1s/Ow/k8qmpq82s2vhJB8ewhPruVD41uJNX69Vu8Hs5hqV6BPMNQV68RCCW87UHtF7JyG9eX2PN+O57KbG4U/R5DSz98GZVzX/8Sc7y6/QTzwbwrHGZukgsKmsSOt+g0Vdv9TIM4J2c3moXXjd/3zvnBu4CTJCokrOFT71aCi0+8B4lhaWiZlHdftCTuYR/yNLyUr+JsjJz1qu0KOFI0euQ3XIfgNbeWA+N0AczcEdpk02mnZx5DBoeRi33DgO0K9rPskaeVTjFmXw3v84+fcbNLN50Hxx07Oc4ksT5aM2IsrumUTRx+7NksN/MhyOWBuTTzGZC7ROilrgQCs68RgaMKPO4yxpY0vjtUXXQ0nrlHentSLSL0syPrBk0rY3aTUwdWo73QSz1z6eURGn9XugwilDskjzuhNWk2WqxHLRkU25rws3aRSktjdZMGo924S2AfU+KEMMsZVs7zfzlpQ4xhfLLp19/Q+7vsdTWNCNXXQctIXpoKCccevfwcW1rAs2kIWgxPhoKyXGGWaq9c2D9zxCYLyFrXzJ3LRU1jSWN7LAlnXLbWdo4ay1pM4/Kkq0sfmRqVlf+OJI0+/2Pt39+3FmXyppoLkmzxYRDhX8TtJb25pLX9WaQpbRkAl+/l5cbW2cRw0Zj2Fm9t2qC65JOuWLC1fmDHVeV61Jmqa3rzRBLefdpjZhd/KUHzQ3EpMRBFvdWDb6ojaAY/95j6ex8k0+4bFEStp9xmSWp0y2rGezDEEvtvlfHo/cZCaIDRHAvMDTdz2GgWdxbNTL/2q3NXkt+K+r5tcUupCmeQP+yX/qc9ku5JXzOUbe8K8U+gCGW0i5J8adyE5REL9xpQR53WYN16W891a/vWpKUsxuA77UTrtm/Kwge2hT9TmmpqSvFPoABljCErNd0c+Upp3z+B0PG29nOelPWwJK+x9lL1h5Ly9f+BywP2dixtP0el1vy9zh7VezDiH4dODvvuap8GUZiyfdhp2Icvw7c2AQk9yBr+ElTaRRgte7/RzRCCPnfwf8jEGEkO8oTI5aYT12IJeZTF7QUgZYi0FIEWopASxFoKQItRaClCCP6deDE0FIEvscRQgghTxXuAiJwRxlBLDGfuhBLzKcuaCkCLUWgpQi0FIGWItBSBFqKQEsR+OtAFFqKwPc4Qggh5KnCXUAE7igjiCXmUxdiifnUBS1FoKUItBSBliLQUgRaikBLEWgpAn8diEJLEfgeRwghhDxVuAuIwB1lBLHEfOpCLDGfuqClCLQUgZYi0FIEWopASxFoKQItReCvA1FoKQLf4wghhJCnCncBEbijjCCWmE9diCXmUxe0FIGWItBSBFqKQEsRaCkCLUWgpQj8dSAKLDU07ypTLxBYCKb/egk4bkdeIIyuMC89akfjLZxM/gNU4FBgjfIHHAAAAABJRU5ErkJggg==;rotation=90;" vertex="1" parent="1">
+        <mxCell id="nh0OFHoUS6rO17LHTK2p-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/png,iVBORw0KGgoAAAANSUhEUgAAASUAAACVCAMAAAApBByEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACiUExURQAAAACjpQCkpv///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wCkp5eLx+UAAAA2dFJOUwCA/3//nQvq+01Q3hEGM/ceyWL1cjLm36fDLa/XbRiIvUCXJeK41ESiRzpmg7rbtmGZXbPQv5Dg3k8AAAAJcEhZcwAAFxEAABcRAcom8z8AAAToSURBVHhe7Zp7f9M2FIaTxbQhLCtdGuqUbWxQoBu7su37f7W95yJbyqU+tckv9fo+fwRbciSdx0ey3DCZTKZftUxxrrDQYCFgofGlCgkh5PEwnXJx6gZruB+Rw4gl5lMXYon51AUtRaClCLQUgZYi0FIEWopASxFoKYLsu2kpAi1F4Hvc8ZlV1TM/PMzZ+fx5+ixZVC++9kOQX5euXn6jVVssqpaLl174aFleVkWc+xlg6dvVldWVjMvSevXqutobxy7dloz8OtyF+1s/Ow/k8qmpq82s2vhJB8ewhPruVD41uJNX69Vu8Hs5hqV6BPMNQV68RCCW87UHtF7JyG9eX2PN+O57KbG4U/R5DSz98GZVzX/8Sc7y6/QTzwbwrHGZukgsKmsSOt+g0Vdv9TIM4J2c3moXXjd/3zvnBu4CTJCokrOFT71aCi0+8B4lhaWiZlHdftCTuYR/yNLyUr+JsjJz1qu0KOFI0euQ3XIfgNbeWA+N0AczcEdpk02mnZx5DBoeRi33DgO0K9rPskaeVTjFmXw3v84+fcbNLN50Hxx07Oc4ksT5aM2IsrumUTRx+7NksN/MhyOWBuTTzGZC7ROilrgQCs68RgaMKPO4yxpY0vjtUXXQ0nrlHentSLSL0syPrBk0rY3aTUwdWo73QSz1z6eURGn9XugwilDskjzuhNWk2WqxHLRkU25rws3aRSktjdZMGo924S2AfU+KEMMsZVs7zfzlpQ4xhfLLp19/Q+7vsdTWNCNXXQctIXpoKCccevfwcW1rAs2kIWgxPhoKyXGGWaq9c2D9zxCYLyFrXzJ3LRU1jSWN7LAlnXLbWdo4ay1pM4/Kkq0sfmRqVlf+OJI0+/2Pt39+3FmXyppoLkmzxYRDhX8TtJb25pLX9WaQpbRkAl+/l5cbW2cRw0Zj2Fm9t2qC65JOuWLC1fmDHVeV61Jmqa3rzRBLefdpjZhd/KUHzQ3EpMRBFvdWDb6ojaAY/95j6ex8k0+4bFEStp9xmSWp0y2rGezDEEvtvlfHo/cZCaIDRHAvMDTdz2GgWdxbNTL/2q3NXkt+K+r5tcUupCmeQP+yX/qc9ku5JXzOUbe8K8U+gCGW0i5J8adyE5REL9xpQR53WYN16W891a/vWpKUsxuA77UTrtm/Kwge2hT9TmmpqSvFPoABljCErNd0c+Upp3z+B0PG29nOelPWwJK+x9lL1h5Ly9f+BywP2dixtP0el1vy9zh7VezDiH4dODvvuap8GUZiyfdhp2Icvw7c2AQk9yBr+ElTaRRgte7/RzRCCPnfwf8jEGEkO8oTI5aYT12IJeZTF7QUgZYi0FIEWopASxFoKQItRaClCCP6deDE0FIEvscRQgghTxXuAiJwRxlBLDGfuhBLzKcuaCkCLUWgpQi0FIGWItBSBFqKQEsR+OtAFFqKwPc4Qggh5KnCXUAE7igjiCXmUxdiifnUBS1FoKUItBSBliLQUgRaikBLEWgpAn8diEJLEfgeRwghhDxVuAuIwB1lBLHEfOpCLDGfuqClCLQUgZYi0FIEWopASxFoKQItReCvA1FoKQLf4wghhJCnCncBEbijjCCWmE9diCXmUxe0FIGWItBSBFqKQEsRaCkCLUWgpQj8dSAKLDU07ypTLxBYCKb/egk4bkdeIIyuMC89akfjLZxM/gNU4FBgjfIHHAAAAABJRU5ErkJggg==;rotation=90;" parent="1" vertex="1">
           <mxGeometry x="260" y="320" width="483.27" height="245.75" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="LyAtiCV3XTXp81cUvUKb" name="Modelo de Datos">
-    <mxGraphModel dx="1413" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1437" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -154,7 +154,7 @@
         <mxCell id="h7ColWvY5arZydpKHJJL-5" value="fecha_baja" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="h7ColWvY5arZydpKHJJL-1" vertex="1">
           <mxGeometry y="630" width="260" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="B1rhPE3I9xytFw2tLOt5-1" value="precio_metro_cuadrado" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="h7ColWvY5arZydpKHJJL-1">
+        <mxCell id="B1rhPE3I9xytFw2tLOt5-1" value="precio_metro_cuadrado" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="h7ColWvY5arZydpKHJJL-1" vertex="1">
           <mxGeometry y="660" width="260" height="30" as="geometry" />
         </mxCell>
         <mxCell id="h7ColWvY5arZydpKHJJL-12" value="historico_precios" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -238,32 +238,32 @@
         <mxCell id="h7ColWvY5arZydpKHJJL-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="h7ColWvY5arZydpKHJJL-29" target="h7ColWvY5arZydpKHJJL-19" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_RV90nyYSpRuEgIRjfCO-8" value="métricas" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" parent="1" vertex="1">
-          <mxGeometry x="480" y="520" width="230" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="_RV90nyYSpRuEgIRjfCO-10" value="&amp;nbsp;precio_pound" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="_RV90nyYSpRuEgIRjfCO-8" vertex="1">
-          <mxGeometry y="30" width="230" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="_RV90nyYSpRuEgIRjfCO-11" value="precio_eu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="_RV90nyYSpRuEgIRjfCO-8" vertex="1">
-          <mxGeometry y="60" width="230" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="_RV90nyYSpRuEgIRjfCO-12" value="precio_dollar" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="_RV90nyYSpRuEgIRjfCO-8" vertex="1">
-          <mxGeometry y="90" width="230" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="B1rhPE3I9xytFw2tLOt5-2" value="promedio metros cuadrados por habitaci:on" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="_RV90nyYSpRuEgIRjfCO-8">
-          <mxGeometry y="120" width="230" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="G2T9hIL1Bh_ekqK3w9lX-3" value="campos a calcular:&amp;nbsp;&lt;div&gt;-&amp;nbsp; edad vivienda -&amp;gt; ano_construccion&lt;/div&gt;&lt;div&gt;-&amp;nbsp; precio/ tamano -&amp;gt; precio_metro_cuadrado&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="890" y="400" width="310" height="230" as="geometry" />
-        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="46OduObzKEzlwc7eJjgo" name="Page-3">
-    <mxGraphModel dx="1493" dy="1523" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="610" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="yH_AWVL_NNC9XXMoV9zx-1" value="métricas" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" vertex="1" parent="1">
+          <mxGeometry x="240" y="440" width="230" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="yH_AWVL_NNC9XXMoV9zx-2" value="&amp;nbsp;precio_pound" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="yH_AWVL_NNC9XXMoV9zx-1">
+          <mxGeometry y="30" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yH_AWVL_NNC9XXMoV9zx-3" value="precio_eu" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="yH_AWVL_NNC9XXMoV9zx-1">
+          <mxGeometry y="60" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yH_AWVL_NNC9XXMoV9zx-4" value="precio_dollar" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="yH_AWVL_NNC9XXMoV9zx-1">
+          <mxGeometry y="90" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yH_AWVL_NNC9XXMoV9zx-5" value="promedio metros cuadrados por habitaci:on" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="yH_AWVL_NNC9XXMoV9zx-1">
+          <mxGeometry y="120" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BscThQnR9vh0ucVQOOJ0-1" value="campos a calcular:&amp;nbsp;&lt;div&gt;-&amp;nbsp; edad vivienda -&amp;gt; ano_construccion&lt;/div&gt;&lt;div&gt;-&amp;nbsp; precio/ tamano -&amp;gt; precio_metro_cuadrado&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="140" width="310" height="230" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
