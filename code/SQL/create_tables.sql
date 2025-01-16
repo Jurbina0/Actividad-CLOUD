@@ -37,7 +37,8 @@ CREATE TABLE IF NOT EXISTS viviendas (
     fecha_modificacion DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     fecha_baja DATETIME NULL,
     ano_construccion INT,
-    precio_metro_cuadrado FLOAT
+    precio_metro_cuadrado FLOAT,
+    code_vivienda VARCHAR(255)
 );
 
 # Creamos la tabla viviendas_favoritas
@@ -48,6 +49,7 @@ CREATE TABLE IF NOT EXISTS viviendas_favoritas (
     fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
     fecha_modificacion DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     fecha_baja DATETIME NULL,
+    code_vivienda VARCHAR(255),
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (id_vivienda) REFERENCES viviendas(id_vivienda) ON DELETE CASCADE ON UPDATE CASCADE
 );
@@ -61,5 +63,6 @@ CREATE TABLE IF NOT EXISTS historico_precios (
     fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
     fecha_modificacion DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     fecha_baja DATETIME NULL,
+    code_vivienda VARCHAR(255),
     FOREIGN KEY (id_vivienda) REFERENCES viviendas(id_vivienda) ON DELETE CASCADE ON UPDATE CASCADE
 );

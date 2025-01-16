@@ -167,4 +167,32 @@ María
 2. crear Lambda con código API
 3. revisar secrets manager
 
+---
 
+mj y jm en el nombre de los buckets
+ojo con glue 3.0
+ojo con insertar en el bucket las libraries de python
+ojo con variables de entorno
+
+
+buenas prácticas de usar variables de entornos, no info sensible
+
+job parameters 
+--s3_bucket         nombre bucket
+--s3_raw_file
+--db_user
+--db_password
+--db_name
+--db_host
+
+1. reciclar codes innecesarios
+2. añadir nueva columna en csv original code_vivienda
+3. nuevo archivo dummy nuevas viviendas
+4. enganchar nuevas viviendas y nuevos cambios en tabla viviendas
+5. actualizar historico_viviendas
+6. escribir dificultades a la hora de hacer glue
+   
+María
+1. crear Lambda busca vivienda (mostrar viviendas con filtros)
+2. mejorar lambdas ya hechas
+3. escribir dificultades a la hora de hacer la lambda
