@@ -3,8 +3,8 @@ import json
 import logging
 import os
 import users_functions as u
-import favorites_functions as f
-import boto3
+import favorites_functions as f  
+import properties_functions as p
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -49,11 +49,11 @@ def lambda_handler(event, context):
         
         body = json.loads(event['body']) if event.get('body') else {}
 
-        if path == '/users' and method == 'GET':
+        if path == '/all_users' and method == 'GET':
             result = u.get_users(conn)
             return {"statusCode": 200, "body": json.dumps(result)}
         
-        elif path == '/users' and method == 'POST':
+        elif path == '/all_users' and method == 'POST':
             result = u.add_user(conn, body)
             return {"statusCode": 201, "body": json.dumps(result)}
         
@@ -72,15 +72,29 @@ def lambda_handler(event, context):
             result = u.delete_user(conn, user_id)
             return {"statusCode": 200, "body": json.dumps(result)}
         
-        # elif path == '/favorite_properties' and method == 'GET':
-        #     user_id = path_params.get('user_id') if path_params else None
-        #     result = f.get_favorites(conn, user_id)
-        #     return {"statusCode": 200, "body": json.dumps(result)}
+        elif path == '/favorite_properties' and method == 'GET':
+            user_id = path_params.get('user_id') if path_params else None
+            result = f.get_favorites(conn, user_id)
+            return {"statusCode": 200, "body": json.dumps(result)}
         
-        # elif path == '/favorite_properties' and method == 'POST':
-        #     user_id = path_params.get('user_id') if path_params else None
-        #     result = f.add_favorite(conn, user_id, body)
-        #     return {"statusCode": 201, "body": json.dumps(result)}
+        elif path == '/favorite_properties' and method == 'POST':
+            user_id = path_params.get('user_id') if path_params else None
+            result = f.add_favorite(conn, user_id, body)
+            return {"statusCode": 201, "body": json.dumps(result)}
+
+        elif path == '/favorite_properties' and method == 'PUT':
+            user_id = path_params.get('user_id') if path_params else None
+            property_id = path_params.get('property_id') if path_params else None
+            result = f.remove_favorite(conn, user_id, property_id)
+            return {"statusCode": 201, "body": json.dumps(result)}
+        
+        elif path == '/all_properties' and method == 'GET':
+            result = p.get_all_properties(conn)
+            return {"statusCode": 200, "body": json.dumps(result)}
+        
+        elif path == '/properties' and method == 'GET':
+            result = p.get_properties_query_params(conn, body)
+            return {"statusCode": 200, "body": json.dumps(result)}
         
         else:
             return {"statusCode": 405, "body": json.dumps({"status": "error", "message": "Method not allowed"})}
