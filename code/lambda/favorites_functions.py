@@ -21,7 +21,6 @@ def add_favorite(conn, user_id, body):
                         VALUES (%s, %s);"""
                 cursor.execute(query, (user_id, id_vivienda))
                 connection.commit()
-                connection.close()
 
                 return {
                     "statusCode": 201,
@@ -37,12 +36,9 @@ def add_favorite(conn, user_id, body):
 
 
 
-def remove_favorite(conn, user_id, body):
+def remove_favorite(conn, user_id, id_vivienda):
     """Function to add a new favorite property to the 'viviendas_favoritas' table."""
     try:
-
-        # Extract user data from the POST request body
-        id_vivienda = body.get('id_vivienda')
 
         # Open a database connection
         with conn as connection:
@@ -55,7 +51,6 @@ def remove_favorite(conn, user_id, body):
                             AND id_vivienda = {id_vivienda};"""
                 cursor.execute(query)
                 connection.commit()
-                connection.close()
 
                 return {
                     "statusCode": 201,
@@ -82,18 +77,19 @@ def get_favorites(conn, user_id):
                 # Parameterized query to prevent SQL injection
                 query = f"""
                 SELECT 
-                    id_vivienda
-                    direccion
+                    viviendas.id_vivienda AS id_vivienda,
+                    direccion,
                     precio_pounds
                 FROM viviendas_favoritas 
-                INNER JOIN viviendas ON id_vivienda
+                INNER JOIN viviendas ON viviendas.id_vivienda = viviendas_favoritas.id_vivienda
                 WHERE id_usuario = {user_id}
-                AND fecha_baja is NULL;
+                AND viviendas_favoritas.fecha_baja is NULL
+                AND viviendas.fecha_baja is NULL;
                 """
                 cursor.execute(query)
                 
                 # Fetch the result
-                result = cursor.fetchone()
+                result = cursor.fetchall()
                 
                 if result is None:
                     return {

@@ -9,11 +9,6 @@ def get_user(conn, user_id):
     """
     Fetches a user by their ID from the 'usuarios' table.
     """
-    if not isinstance(user_id, int) or user_id <= 0:
-        return {
-            "statusCode": 400,
-            "body": json.dumps({"status": "error", "message": "Invalid user_id"})
-        }
 
     try:
         # Open a database connection
@@ -29,8 +24,7 @@ def get_user(conn, user_id):
                     email, 
                     recibir_emails, 
                     fecha_creacion, 
-                    fecha_modificacion,
-                    fecha_baja 
+                    fecha_modificacion
                 FROM usuarios 
                 WHERE id_usuario = {user_id}
                 AND fecha_baja is NULL;
@@ -55,8 +49,7 @@ def get_user(conn, user_id):
                     "email": result[4],
                     "recibir_emails": str(result[5]),
                     "fecha_creacion": result[6].strftime('%Y-%m-%d %H:%M:%S'),
-                    "fecha_modificacion": result[7].strftime('%Y-%m-%d %H:%M:%S'), 
-                    "fecha_baja": result[8].strftime('%Y-%m-%d %H:%M:%S') if result[8] else None  
+                    "fecha_modificacion": result[7].strftime('%Y-%m-%d %H:%M:%S') 
                 }
 
                 return {
@@ -165,7 +158,7 @@ def update_user(conn, user_id, body):
     try:
         # Validate input fields
         required_fields = ['nombre', 'apellido1', 'apellido2', 'email', 'recibir_emails']
-        missing_fields = [field for field in required_fields if field not in body]
+        missing_fields = [field for field in required_fields if field not in body.keys()]
 
         if missing_fields:
             return {

@@ -1,0 +1,477 @@
+{
+	"info": {
+		"_postman_id": "5f0ad852-3cc4-43ab-8510-b71b5dfa2079",
+		"name": "Inmobiliaria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40689491"
+	},
+	"item": [
+		{
+			"name": "Obtener todos los usuarios",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://hsx2nm4jc7.execute-api.us-east-1.amazonaws.com/dev/all_users",
+					"protocol": "https",
+					"host": [
+						"hsx2nm4jc7",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"all_users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todas las viviendas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://hsx2nm4jc7.execute-api.us-east-1.amazonaws.com/dev/all_properties",
+					"protocol": "https",
+					"host": [
+						"hsx2nm4jc7",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"all_properties"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener viviendas filtros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"orderby\": \"precio_pounds\",\r\n\"filters\":{\r\n    \"quantitative\":{\r\n        \"tamano\":{\r\n            \"less_or_equal\": \"500\",\r\n            \"more_or_equal\": \"50\"\r\n        }\r\n    },\r\n    \"qualitative\":{\r\n        \"tipo_vivienda\":[\"Apartment\"]\r\n    },\r\n    \"boolean\":{\r\n        \"hay_jardin\":1\r\n    }\r\n}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hsx2nm4jc7.execute-api.us-east-1.amazonaws.com/dev/properties",
+					"protocol": "https",
+					"host": [
+						"hsx2nm4jc7",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"properties"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener vivienda property_id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://hsx2nm4jc7.execute-api.us-east-1.amazonaws.com/dev/property?property_id=2",
+					"protocol": "https",
+					"host": [
+						"hsx2nm4jc7",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"property"
+					],
+					"query": [
+						{
+							"key": "property_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Añadir favorito user_id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id_vivienda\":3}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hsx2nm4jc7.execute-api.us-east-1.amazonaws.com/dev/favorite_properties?user_id=2",
+					"protocol": "https",
+					"host": [
+						"hsx2nm4jc7",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"favorite_properties"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener favoritos user_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hsx2nm4jc7.execute-api.us-east-1.amazonaws.com/dev/favorite_properties?user_id=2",
+					"protocol": "https",
+					"host": [
+						"hsx2nm4jc7",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"favorite_properties"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar favorito",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hsx2nm4jc7.execute-api.us-east-1.amazonaws.com/dev/favorite_properties?user_id=2&id_vivienda=2",
+					"protocol": "https",
+					"host": [
+						"hsx2nm4jc7",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"favorite_properties"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "2"
+						},
+						{
+							"key": "id_vivienda",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar vivienda property_id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://hsx2nm4jc7.execute-api.us-east-1.amazonaws.com/dev/property?property_id=1",
+					"protocol": "https",
+					"host": [
+						"hsx2nm4jc7",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"property"
+					],
+					"query": [
+						{
+							"key": "property_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener usuario user_id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://hsx2nm4jc7.execute-api.us-east-1.amazonaws.com/dev/user?user_id=1",
+					"protocol": "https",
+					"host": [
+						"hsx2nm4jc7",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"user"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar usuario user_id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nombre\": \"Maria\",\r\n\"apellido1\": \"Correas\",\r\n\"apellido2\": \"Crespo\",\r\n\"email\": \"maria2@test.com\",\r\n\"recibir_emails\": true}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hsx2nm4jc7.execute-api.us-east-1.amazonaws.com/dev/user?user_id=1",
+					"protocol": "https",
+					"host": [
+						"hsx2nm4jc7",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"user"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar usuario user_id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://hsx2nm4jc7.execute-api.us-east-1.amazonaws.com/dev/user?user_id=1",
+					"protocol": "https",
+					"host": [
+						"hsx2nm4jc7",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"user"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear nuevo usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nombre\": \"Judith\",\r\n\"apellido1\": \"Urbina\",\r\n\"apellido2\": \"Cordoba\",\r\n\"email\":\"judith@ejemplo.com\",\r\n\"recibir_emails\":true}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hsx2nm4jc7.execute-api.us-east-1.amazonaws.com/dev/all_users",
+					"protocol": "https",
+					"host": [
+						"hsx2nm4jc7",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"all_users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "x-api-key",
+			"value": "R9FIuyosto3AmsztVyqrh9qSnLJklJQh1BUrc7yn"
+		}
+	]
+}

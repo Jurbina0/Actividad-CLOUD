@@ -36,11 +36,11 @@ def lambda_handler(event, context):
     """Main Lambda function handler."""
 
     logging.info(event)
+    print(event)
     path = event['path']
     method = event['httpMethod']
     headers = event['headers']
     query_params = event.get('queryStringParameters')
-    path_params = event.get('pathParameters')
 
     conn = None
     try:
@@ -58,33 +58,33 @@ def lambda_handler(event, context):
             return {"statusCode": 201, "body": json.dumps(result)}
         
         elif path == '/user' and method == 'GET':
-            user_id = path_params.get('user_id')
+            user_id = query_params.get('user_id') if query_params else None
             result = u.get_user(conn, user_id)
             return {"statusCode": 200, "body": json.dumps(result)}
         
         elif path == '/user' and method == 'PUT':
-            user_id = path_params.get('user_id') if path_params else None
+            user_id = query_params.get('user_id') if query_params else None
             result = u.update_user(conn, user_id, body)
             return {"statusCode": 200, "body": json.dumps(result)}
         
         elif path == '/user' and method == 'DELETE':
-            user_id = path_params.get('user_id') if path_params else None
+            user_id = query_params.get('user_id') if query_params else None
             result = u.delete_user(conn, user_id)
             return {"statusCode": 200, "body": json.dumps(result)}
         
         elif path == '/favorite_properties' and method == 'GET':
-            user_id = path_params.get('user_id') if path_params else None
+            user_id = query_params.get('user_id') if query_params else None
             result = f.get_favorites(conn, user_id)
             return {"statusCode": 200, "body": json.dumps(result)}
         
         elif path == '/favorite_properties' and method == 'POST':
-            user_id = path_params.get('user_id') if path_params else None
+            user_id = query_params.get('user_id') if query_params else None
             result = f.add_favorite(conn, user_id, body)
             return {"statusCode": 201, "body": json.dumps(result)}
 
         elif path == '/favorite_properties' and method == 'PUT':
-            user_id = path_params.get('user_id') if path_params else None
-            property_id = path_params.get('property_id') if path_params else None
+            user_id = query_params.get('user_id') 
+            property_id = query_params.get('id_vivienda') 
             result = f.remove_favorite(conn, user_id, property_id)
             return {"statusCode": 201, "body": json.dumps(result)}
         
@@ -94,6 +94,16 @@ def lambda_handler(event, context):
         
         elif path == '/properties' and method == 'GET':
             result = p.get_properties_query_params(conn, body)
+            return {"statusCode": 200, "body": json.dumps(result)}
+        
+        elif path == '/property' and method == 'GET':
+            property_id = query_params.get('property_id')
+            result = p.get_property(conn, property_id)
+            return {"statusCode": 200, "body": json.dumps(result)}
+
+        elif path == '/property' and method == 'DELETE':
+            property_id = query_params.get('property_id') 
+            result = p.delete_property(conn, property_id)
             return {"statusCode": 200, "body": json.dumps(result)}
         
         else:
