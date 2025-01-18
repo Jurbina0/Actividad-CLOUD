@@ -103,6 +103,7 @@ def etl_inmobiliaria(input_path):
         cursor.execute("""
             SELECT precio_metro_cuadrado, code_vivienda, id_vivienda, tamano
             FROM viviendas
+            WHERE fecha_baja IS NULL;
         """)
         precios_viviendas = cursor.fetchall()
 

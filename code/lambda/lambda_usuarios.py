@@ -58,7 +58,7 @@ def lambda_handler(event, context):
             return {"statusCode": 201, "body": json.dumps(result)}
         
         elif path == '/user' and method == 'GET':
-            user_id = path_params.get('user_id') if path_params else None
+            user_id = path_params.get('user_id')
             result = u.get_user(conn, user_id)
             return {"statusCode": 200, "body": json.dumps(result)}
         

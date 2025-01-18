@@ -6,6 +6,11 @@ from awsglue.dynamicframe import DynamicFrame
 from pyspark.context import SparkContext
 import pyspark.sql.functions as F
 from datetime import datetime
+import logging
+import time
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
 
 # Librería adicional para conectar con MySQL
 import pymysql
@@ -25,9 +30,9 @@ db_name = args['db_name']
 
 
 
-# Ruta del bucket origen y destino
-input_path = f"s3://{s3_bucket}/{s3_raw_file}"  # Cambiar según el bucket origen
-output_path = "s3://m6-inmobiliaria-mj/processed_data/"  # Cambiar según el bucket destino
+# Ruta del bucket origen
+input_path = f"s3://{s3_bucket}/{s3_raw_file}"  
+
 
 # Leer los datos del bucket S3
 datasource = glueContext.create_dynamic_frame.from_options(
@@ -76,37 +81,25 @@ df = df.withColumn("precio_pounds", F.col("precio_pounds").cast("float"))
 current_datetime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 current_year = datetime.now().year
 
-df = df.withColumn("fecha_creacion", F.lit(current_datetime)) \
-       .withColumn("fecha_modificacion", F.lit(None).cast("string")) \
-       .withColumn("fecha_baja", F.lit(None).cast("string")) \
-       .withColumn("ano_construccion", F.lit(current_year) - F.col("edad_vivienda").cast("int")) \
+df = df.withColumn("ano_construccion", F.lit(current_year) - F.col("edad_vivienda").cast("int")) \
        .drop("edad_vivienda") \
        .withColumn("precio_metro_cuadrado", F.round(F.col("precio_pounds") / F.col("tamano"), 1)) \
-       .withColumn("code_vivienda", F.expr("uuid()")) # Agregar una columna con universal unique identifiers (UUIDs)
 
-# Escribir los datos transformados en S3
-transformed_dynamic_frame = DynamicFrame.fromDF(df, glueContext, "transformed_dynamic_frame")
-glueContext.write_dynamic_frame.from_options(
-    frame=transformed_dynamic_frame,
-    connection_type="s3",
-    connection_options={"path": output_path},
-    format="csv",
-    format_options={"writeHeader": True}
-)
 
-# **Escribir en MySQL**
-# Configuración de conexión a MySQL
-mysql_host = db_host
-mysql_user = db_user
-mysql_password = db_password
-mysql_database = db_name
-mysql_table = "viviendas"
+code_viviendas_list = df.select("code_vivienda").rdd.flatMap(lambda x: x).collect()
+code_viviendas_list_string = str(code_viviendas_list).replace('[', '').replace(']', '').replace('"',"'")
+logging.info(f"Lista viviendas repetidas: {code_viviendas_list_string}")
 
-# Convertir DataFrame a lista de diccionarios para inserción en MySQL
-data = [row.asDict() for row in df.collect()]
-
-# Conectar a la base de datos MySQL y escribir los datos
+# Process Updates in MySQL
 try:
+    # Database Configuration
+    mysql_host = db_host
+    mysql_user = db_user
+    mysql_password = db_password
+    mysql_database = db_name
+    mysql_table = "viviendas"
+    
+    # Open MySQL connection
     connection = pymysql.connect(
         host=mysql_host,
         user=mysql_user,
@@ -114,20 +107,92 @@ try:
         database=mysql_database,
         cursorclass=pymysql.cursors.DictCursor
     )
+    
     with connection.cursor() as cursor:
-        # Crear la consulta SQL para insertar los datos
-        columns = ", ".join(data[0].keys())
-        placeholders = ", ".join(["%s"] * len(data[0]))
-        sql_query = f"INSERT INTO {mysql_table} ({columns}) VALUES ({placeholders})"
+        # Safe SQL Query to Fetch Existing Data
+        query = """
+            SELECT precio_metro_cuadrado, code_vivienda, id_vivienda, tamano
+            FROM viviendas
+            WHERE fecha_baja IS NULL
+            AND code_vivienda IN %s;
+        """
         
-        # Ejecutar la inserción en lote
-        cursor.executemany(sql_query, [tuple(row.values()) for row in data])
+        # Pass the code_viviendas_list safely as a parameter
+        code_viviendas_list = df.select("code_vivienda").rdd.flatMap(lambda x: x).collect()
+        cursor.execute(query, (tuple(code_viviendas_list),))
+        precios_viviendas = cursor.fetchall()
+        
+        # Extract existing `code_vivienda` from MySQL
+        code_vivienda_list_from_db = [row["code_vivienda"] for row in precios_viviendas]
+    
+        # Filter DataFrame for repeated and new viviendas
+        df_viviendas_repetidas = df.filter(F.col("code_vivienda").isin(code_vivienda_list_from_db))
+        df_viviendas_nuevas = df.filter(~F.col("code_vivienda").isin(code_vivienda_list_from_db))
+    
+        # Log the counts
+        logging.info(f"Número de viviendas repetidas: {df_viviendas_repetidas.count()}")
+        logging.info(f"Número de viviendas nuevas: {df_viviendas_nuevas.count()}")
+    
+        # Handle repeated viviendas: Update if necessary
+        if df_viviendas_repetidas.count() > 0:
+            for row_nuevo in df_viviendas_repetidas.collect():
+                for row_antes in precios_viviendas:
+                    if row_antes["code_vivienda"] == row_nuevo["code_vivienda"]:
+                        if row_antes["precio_metro_cuadrado"] != row_nuevo["precio_metro_cuadrado"]:
+                            # Insert into historico_precios
+                            cursor.execute("""
+                                INSERT INTO historico_precios (
+                                    precio_pounds,
+                                    code_vivienda,
+                                    id_vivienda
+                                ) VALUES (%s, %s, %s)
+                            """, (
+                                row_nuevo["precio_pounds"],
+                                row_nuevo["code_vivienda"],
+                                row_antes["id_vivienda"]
+                            ))
+    
+                            # Update viviendas
+                            cursor.execute("""
+                                UPDATE viviendas
+                                SET precio_metro_cuadrado = %s, precio_pounds = %s
+                                WHERE code_vivienda = %s
+                            """, (
+                                row_nuevo["precio_metro_cuadrado"],
+                                row_nuevo["precio_pounds"],
+                                row_nuevo["code_vivienda"]
+                            ))
+                            logging.info(f"Updated viviendas with code_vivienda: {row_nuevo['code_vivienda']}")
+    
+        # Handle new viviendas: Insert into MySQL
+        if df_viviendas_nuevas.count() > 0:
+            data = [row.asDict() for row in df_viviendas_nuevas.collect()]
+            columns = ", ".join(data[0].keys())
+            placeholders = ", ".join(["%s"] * len(data[0]))
+            sql_query = f"INSERT INTO {mysql_table} ({columns}) VALUES ({placeholders})"
+            cursor.executemany(sql_query, [tuple(row.values()) for row in data])
+            
+            time.sleep(5)
+            
+            # viviendas ingestadas
+            code_viviendas_nuevas_list = df_viviendas_nuevas.select("code_vivienda").rdd.flatMap(lambda x: x).collect()
+            query = """INSERT INTO historico_precios (id_vivienda, precio_pounds, code_vivienda)
+                            SELECT id_vivienda, precio_pounds, code_vivienda
+                            FROM viviendas
+                            WHERE code_vivienda IN %s;
+                            """
+            cursor.execute(query, (tuple(code_viviendas_nuevas_list),))
+            
+            logging.info("Database inserts completed successfully.")
+    
+        # Commit changes
         connection.commit()
-    print("Datos insertados correctamente en MySQL.")
+        
 except Exception as e:
-    print(f"Error al insertar datos en MySQL: {e}")
+    logging.error(f"Error processing viviendas data: {e}")
 finally:
     if connection:
         connection.close()
 
-print("ETL Job finalizado correctamente!")
+logging.info("ETL Job finalized successfully!")
+
