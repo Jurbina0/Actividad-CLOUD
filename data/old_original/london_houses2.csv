@@ -1,0 +1,101 @@
+Address,Neighborhood,Bedrooms,Bathrooms,Square Meters,Building Age,Garden,Garage,Floors,Property Type,Heating Type,Balcony,Interior Style,View,Materials,Building Status,Price (£)
+198 Oxford Street,Westminster,2,1,123,34,Yes,No,1,Apartment,Central Heating,High-level Balcony,Industrial,City,Laminate Flooring,Old,1476000
+93 Park Lane,Camden,5,2,81,49,Yes,Yes,1,Apartment,Underfloor Heating,Low-level Balcony,Classic,Garden,Granite,Renovated,702000
+179 Piccadilly Circus,Notting Hill,5,3,119,63,No,No,2,Detached House,Central Heating,No Balcony,Classic,Park,Laminate Flooring,Old,1904000
+50 Park Lane,Islington,1,3,64,24,No,Yes,2,Apartment,Underfloor Heating,No Balcony,Classic,Sea,Granite,Old,512000
+163 Strand,Soho,2,3,172,1,Yes,No,2,Apartment,Underfloor Heating,High-level Balcony,Minimalist,Street,Granite,Renovated,1605333
+104 Bond Street,Chelsea,2,2,93,48,Yes,No,2,Apartment,Electric Heating,High-level Balcony,Classic,Park,Laminate Flooring,New,1240000
+187 Oxford Street,Kensington,5,3,158,41,Yes,Yes,1,Apartment,Gas Heating,High-level Balcony,Classic,Garden,Marble,New,2001333
+61 Oxford Street,Notting Hill,3,3,68,86,No,Yes,1,Detached House,Gas Heating,High-level Balcony,Minimalist,Sea,Marble,Old,1088000
+52 Regent Street,Kensington,1,1,118,18,Yes,No,3,Apartment,Central Heating,High-level Balcony,Modern,City,Marble,Renovated,1494666
+94 Regent Street,Soho,3,2,57,77,Yes,Yes,1,Apartment,Central Heating,No Balcony,Minimalist,Park,Laminate Flooring,Old,532000
+20 Fleet Street,Islington,1,2,240,95,Yes,Yes,3,Apartment,Gas Heating,No Balcony,Industrial,City,Laminate Flooring,New,1920000
+58 King's Road,Islington,5,2,86,22,Yes,Yes,3,Semi-Detached,Electric Heating,No Balcony,Industrial,Street,Marble,Renovated,825600
+75 Camden High Street,Soho,3,3,105,15,Yes,Yes,3,Semi-Detached,Electric Heating,No Balcony,Industrial,City,Wood,New,1176000
+96 Regent Street,Soho,5,3,176,29,Yes,No,1,Detached House,Electric Heating,No Balcony,Minimalist,Park,Marble,New,2464000
+179 King's Road,Shoreditch,2,2,86,18,Yes,No,3,Semi-Detached,Underfloor Heating,Low-level Balcony,Industrial,City,Laminate Flooring,New,756799
+50 Oxford Street,Marylebone,1,2,192,2,No,No,3,Apartment,Central Heating,No Balcony,Industrial,Sea,Marble,New,1920000
+192 Oxford Street,Chelsea,5,1,127,80,Yes,No,2,Semi-Detached,Electric Heating,Low-level Balcony,Classic,Garden,Marble,New,2032000
+111 Regent Street,Notting Hill,3,2,196,80,Yes,No,2,Detached House,Electric Heating,High-level Balcony,Modern,Park,Wood,Old,3136000
+66 Camden High Street,Shoreditch,4,2,103,28,No,No,1,Semi-Detached,Underfloor Heating,Low-level Balcony,Industrial,Garden,Laminate Flooring,Renovated,906399
+164 Fleet Street,Camden,5,1,160,61,No,No,2,Semi-Detached,Gas Heating,Low-level Balcony,Modern,Garden,Laminate Flooring,Renovated,1663999
+58 Fleet Street,Camden,3,2,124,64,Yes,Yes,2,Semi-Detached,Central Heating,Low-level Balcony,Minimalist,Sea,Laminate Flooring,Renovated,1289599
+122 King's Road,Islington,2,1,186,41,No,No,2,Detached House,Underfloor Heating,High-level Balcony,Classic,Street,Wood,New,2232000
+122 Camden High Street,Kensington,4,3,111,59,Yes,No,1,Semi-Detached,Underfloor Heating,High-level Balcony,Industrial,Garden,Laminate Flooring,Renovated,1687200
+77 Piccadilly Circus,Marylebone,5,3,163,36,Yes,No,1,Detached House,Central Heating,High-level Balcony,Minimalist,Garden,Wood,Renovated,2445000
+172 Fleet Street,Soho,5,1,63,84,Yes,No,1,Semi-Detached,Central Heating,High-level Balcony,Classic,Street,Wood,Old,705600
+87 Park Lane,Islington,1,3,161,54,No,Yes,3,Semi-Detached,Electric Heating,Low-level Balcony,Classic,Garden,Laminate Flooring,New,1545600
+185 Park Lane,Marylebone,4,3,193,73,No,No,3,Detached House,Electric Heating,High-level Balcony,Minimalist,Garden,Wood,New,2895000
+19 Fleet Street,Westminster,5,2,84,4,No,Yes,3,Semi-Detached,Underfloor Heating,Low-level Balcony,Industrial,Sea,Laminate Flooring,Renovated,1209600
+33 Baker Street,Kensington,3,1,115,89,Yes,Yes,1,Apartment,Gas Heating,Low-level Balcony,Industrial,City,Wood,Old,1456666
+52 Fleet Street,Westminster,5,3,241,75,Yes,Yes,2,Detached House,Gas Heating,Low-level Balcony,Classic,Garden,Laminate Flooring,New,4338000
+38 Oxford Street,Westminster,2,1,190,29,Yes,No,1,Semi-Detached,Electric Heating,Low-level Balcony,Modern,Park,Wood,Old,2736000
+87 Regent Street,Shoreditch,5,3,94,99,No,Yes,2,Semi-Detached,Gas Heating,High-level Balcony,Minimalist,Garden,Marble,Old,827199
+107 Baker Street,Soho,2,2,139,35,No,Yes,1,Detached House,Central Heating,No Balcony,Industrial,Garden,Laminate Flooring,Old,1946000
+52 Piccadilly Circus,Westminster,3,1,109,98,Yes,No,1,Detached House,Central Heating,High-level Balcony,Modern,Street,Marble,New,1962000
+198 Strand,Chelsea,1,2,189,20,Yes,No,2,Detached House,Electric Heating,Low-level Balcony,Classic,Sea,Laminate Flooring,New,3780000
+139 Strand,Soho,4,3,246,3,Yes,Yes,2,Semi-Detached,Gas Heating,No Balcony,Classic,Sea,Laminate Flooring,Renovated,2755200
+127 Bond Street,Westminster,3,1,71,70,No,Yes,2,Semi-Detached,Underfloor Heating,High-level Balcony,Classic,City,Marble,Old,1022400
+141 Bond Street,Chelsea,3,3,180,20,No,No,3,Detached House,Gas Heating,Low-level Balcony,Modern,Park,Marble,Renovated,3600000
+98 Camden High Street,Marylebone,3,2,200,71,Yes,Yes,2,Apartment,Electric Heating,High-level Balcony,Classic,Street,Wood,Old,2000000
+190 Fleet Street,Notting Hill,4,1,94,25,Yes,Yes,1,Detached House,Electric Heating,No Balcony,Classic,City,Marble,Renovated,1504000
+57 Bond Street,Kensington,4,3,211,40,No,Yes,2,Detached House,Underfloor Heating,No Balcony,Industrial,City,Laminate Flooring,Renovated,4009000
+139 Fleet Street,Islington,5,1,78,24,No,Yes,2,Detached House,Underfloor Heating,No Balcony,Modern,Park,Wood,New,936000
+53 Bond Street,Islington,3,1,87,19,Yes,Yes,2,Semi-Detached,Gas Heating,High-level Balcony,Minimalist,Park,Laminate Flooring,New,835200
+63 Baker Street,Notting Hill,1,3,92,12,No,Yes,2,Apartment,Gas Heating,No Balcony,Classic,Street,Laminate Flooring,Old,981333
+99 Bond Street,Greenwich,1,3,152,52,Yes,Yes,3,Apartment,Central Heating,Low-level Balcony,Classic,Garden,Laminate Flooring,New,1013333
+59 Bond Street,Greenwich,4,3,184,83,No,Yes,3,Apartment,Electric Heating,No Balcony,Classic,Park,Laminate Flooring,Renovated,1226666
+27 King's Road,Camden,5,1,188,37,Yes,No,2,Detached House,Underfloor Heating,No Balcony,Classic,Sea,Marble,Old,2444000
+145 Oxford Street,Chelsea,3,1,54,55,No,Yes,3,Detached House,Electric Heating,No Balcony,Industrial,Street,Granite,Renovated,1080000
+2 Baker Street,Shoreditch,5,3,131,12,Yes,No,3,Detached House,Central Heating,No Balcony,Minimalist,City,Marble,New,1441000
+29 King's Road,Shoreditch,1,3,71,12,Yes,Yes,3,Semi-Detached,Gas Heating,High-level Balcony,Modern,Garden,Marble,Renovated,624799
+16 Camden High Street,Soho,2,2,75,95,No,Yes,2,Semi-Detached,Underfloor Heating,High-level Balcony,Modern,Park,Laminate Flooring,Renovated,840000
+156 Park Lane,Chelsea,1,3,222,89,No,Yes,2,Apartment,Electric Heating,High-level Balcony,Industrial,City,Laminate Flooring,Renovated,2960000
+12 Camden High Street,Camden,2,2,113,92,Yes,Yes,2,Semi-Detached,Underfloor Heating,No Balcony,Classic,Street,Marble,New,1175199
+45 Strand,Notting Hill,4,1,171,17,No,Yes,1,Semi-Detached,Central Heating,Low-level Balcony,Minimalist,City,Wood,Old,2188800
+194 Bond Street,Islington,2,1,177,55,No,No,1,Apartment,Central Heating,High-level Balcony,Modern,Sea,Granite,Renovated,1416000
+128 Piccadilly Circus,Notting Hill,2,2,65,93,Yes,No,3,Semi-Detached,Gas Heating,Low-level Balcony,Industrial,Park,Marble,New,831999
+74 Baker Street,Shoreditch,4,1,243,77,No,Yes,2,Detached House,Electric Heating,High-level Balcony,Modern,Garden,Granite,New,2673000
+56 Oxford Street,Greenwich,5,1,235,49,No,Yes,1,Detached House,Central Heating,No Balcony,Modern,Sea,Laminate Flooring,Renovated,2350000
+34 Bond Street,Shoreditch,2,1,198,52,Yes,Yes,2,Detached House,Central Heating,No Balcony,Minimalist,Street,Granite,Renovated,2178000
+180 Camden High Street,Notting Hill,3,1,120,14,Yes,Yes,2,Apartment,Central Heating,High-level Balcony,Minimalist,Park,Granite,New,1280000
+61 Baker Street,Marylebone,2,3,84,13,No,No,2,Apartment,Electric Heating,High-level Balcony,Classic,Park,Wood,Old,840000
+46 Camden High Street,Westminster,3,3,88,86,No,Yes,3,Semi-Detached,Gas Heating,No Balcony,Modern,City,Laminate Flooring,New,1267200
+174 Regent Street,Chelsea,2,1,243,61,No,Yes,3,Apartment,Electric Heating,Low-level Balcony,Industrial,City,Wood,New,3240000
+144 Baker Street,Soho,3,2,213,37,Yes,No,3,Semi-Detached,Electric Heating,Low-level Balcony,Industrial,Park,Laminate Flooring,Renovated,2385600
+27 Oxford Street,Chelsea,1,2,236,84,Yes,Yes,2,Semi-Detached,Gas Heating,No Balcony,Minimalist,City,Laminate Flooring,Old,3776000
+74 King's Road,Marylebone,4,3,188,29,Yes,Yes,3,Semi-Detached,Electric Heating,No Balcony,Modern,City,Wood,Old,2256000
+76 Bond Street,Westminster,2,3,129,62,Yes,Yes,2,Detached House,Gas Heating,No Balcony,Classic,Garden,Laminate Flooring,New,2322000
+149 Camden High Street,Notting Hill,3,3,134,24,Yes,No,1,Apartment,Gas Heating,No Balcony,Minimalist,Street,Wood,Old,1429333
+115 Fleet Street,Islington,1,2,206,11,No,Yes,2,Apartment,Underfloor Heating,Low-level Balcony,Minimalist,Garden,Laminate Flooring,Renovated,1648000
+99 Fleet Street,Soho,2,2,123,7,No,Yes,1,Apartment,Central Heating,No Balcony,Minimalist,Garden,Granite,Renovated,1148000
+188 Strand,Shoreditch,5,2,167,67,No,Yes,2,Semi-Detached,Underfloor Heating,No Balcony,Modern,Street,Marble,Renovated,1469599
+84 Bond Street,Marylebone,5,3,93,47,No,No,1,Detached House,Underfloor Heating,High-level Balcony,Modern,City,Wood,New,1395000
+64 Camden High Street,Camden,2,2,79,14,Yes,Yes,2,Detached House,Underfloor Heating,No Balcony,Industrial,City,Marble,New,1027000
+42 Baker Street,Westminster,3,2,235,50,Yes,No,1,Semi-Detached,Electric Heating,High-level Balcony,Industrial,Sea,Laminate Flooring,Old,3384000
+88 Piccadilly Circus,Chelsea,4,3,141,8,Yes,No,3,Semi-Detached,Underfloor Heating,Low-level Balcony,Minimalist,City,Granite,Old,2256000
+41 Baker Street,Islington,4,2,224,48,No,Yes,2,Semi-Detached,Central Heating,High-level Balcony,Minimalist,Garden,Wood,Renovated,2150400
+193 Regent Street,Notting Hill,3,2,149,33,Yes,Yes,3,Semi-Detached,Central Heating,No Balcony,Modern,Sea,Laminate Flooring,New,1907199
+114 Bond Street,Soho,2,2,187,53,Yes,No,3,Apartment,Underfloor Heating,No Balcony,Modern,Sea,Wood,Old,1745333
+123 Baker Street,Chelsea,4,1,64,52,No,No,1,Semi-Detached,Gas Heating,Low-level Balcony,Minimalist,Garden,Granite,New,1024000
+60 Baker Street,Chelsea,3,3,88,4,Yes,Yes,2,Detached House,Underfloor Heating,Low-level Balcony,Classic,Sea,Laminate Flooring,Old,1760000
+135 King's Road,Camden,5,3,221,49,Yes,No,2,Apartment,Electric Heating,High-level Balcony,Classic,Park,Granite,New,1915333
+119 Baker Street,Shoreditch,2,1,246,34,No,No,3,Detached House,Underfloor Heating,High-level Balcony,Classic,Garden,Laminate Flooring,Renovated,2706000
+81 Regent Street,Marylebone,1,3,111,69,No,Yes,2,Semi-Detached,Electric Heating,Low-level Balcony,Minimalist,Park,Laminate Flooring,Old,1332000
+3 Baker Street,Notting Hill,2,1,202,51,No,Yes,2,Detached House,Gas Heating,Low-level Balcony,Modern,Park,Marble,Old,3232000
+150 King's Road,Notting Hill,3,1,186,67,Yes,Yes,2,Semi-Detached,Central Heating,Low-level Balcony,Modern,Street,Laminate Flooring,New,2380800
+34 Strand,Marylebone,4,1,127,97,No,No,3,Apartment,Electric Heating,No Balcony,Industrial,City,Marble,New,1270000
+155 Park Lane,Camden,5,2,131,3,Yes,No,2,Detached House,Underfloor Heating,High-level Balcony,Modern,Park,Laminate Flooring,Renovated,1703000
+84 Fleet Street,Westminster,3,3,82,18,No,No,2,Apartment,Gas Heating,No Balcony,Industrial,Park,Marble,Renovated,984000
+197 Bond Street,Notting Hill,2,1,246,86,Yes,Yes,2,Semi-Detached,Electric Heating,High-level Balcony,Minimalist,Street,Laminate Flooring,New,3148800
+77 Fleet Street,Camden,2,1,174,74,No,Yes,1,Apartment,Gas Heating,High-level Balcony,Modern,Park,Laminate Flooring,Old,1508000
+68 Oxford Street,Shoreditch,4,3,248,38,No,Yes,2,Semi-Detached,Gas Heating,No Balcony,Modern,Sea,Wood,Renovated,2182399
+117 Bond Street,Notting Hill,3,2,171,63,Yes,No,2,Semi-Detached,Central Heating,No Balcony,Industrial,Street,Laminate Flooring,Renovated,2188800
+38 Bond Street,Westminster,3,3,141,70,Yes,No,1,Semi-Detached,Underfloor Heating,High-level Balcony,Classic,Street,Marble,New,2030400
+159 King's Road,Kensington,3,2,201,52,Yes,Yes,1,Apartment,Electric Heating,High-level Balcony,Minimalist,Garden,Wood,Old,2546000
+87 Park Lane,Islington,5,3,158,62,Yes,Yes,3,Apartment,Electric Heating,No Balcony,Minimalist,Sea,Wood,New,1264000
+176 Park Lane,Greenwich,2,2,104,48,No,Yes,3,Detached House,Gas Heating,Low-level Balcony,Classic,City,Granite,Old,1040000
+90 King's Road,Chelsea,5,3,157,59,Yes,No,3,Detached House,Electric Heating,High-level Balcony,Modern,City,Wood,New,3140000
+169 Strand,Greenwich,4,2,204,28,No,Yes,3,Apartment,Gas Heating,No Balcony,Modern,Park,Wood,New,1360000
+93 Piccadilly Circus,Kensington,4,2,56,82,Yes,Yes,3,Apartment,Gas Heating,No Balcony,Modern,Garden,Wood,Old,709333
+32 Oxford Street,Kensington,2,1,53,47,No,Yes,2,Apartment,Gas Heating,High-level Balcony,Modern,Sea,Laminate Flooring,New,671333

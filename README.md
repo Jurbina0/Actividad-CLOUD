@@ -196,3 +196,6 @@ María
 1. crear Lambda busca vivienda (mostrar viviendas con filtros)
 2. mejorar lambdas ya hechas
 3. escribir dificultades a la hora de hacer la lambda
+
+futuros 
+elegir validaciones que importan

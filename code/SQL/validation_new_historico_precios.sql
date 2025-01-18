@@ -1,0 +1,1 @@
+SELECT * FROM inmobiliaria.historico_precios WHERE code_vivienda = '521d517e-e916-446e-bcbd-a7f45e8102f0' ;
