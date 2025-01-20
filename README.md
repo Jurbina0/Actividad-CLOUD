@@ -185,6 +185,7 @@ job parameters
 --db_name
 --db_host
 
+
 1. reciclar codes innecesarios
 2. añadir nueva columna en csv original code_vivienda
 3. nuevo archivo dummy nuevas viviendas
@@ -198,4 +199,42 @@ María
 3. escribir dificultades a la hora de hacer la lambda
 
 futuros 
-elegir validaciones que importan
+elegir validaciones que importan\
+
+-------
+
+María
+- añadir baja viviendas
+- métodos y fotos de que funciona
+- mejorar swagger yaml
+- poner errores gestionados añadir unos pocos
+
+Judith
+
+mayus tab izquierda
+tab derecha
+
+1. validaciones de que funciona
+2. poner errores gestionados añadir unos pocos
+3. limpieza de codes (añadir el script de borrado )
+4. documentación bonita
+pensar en el Correo con una carpeta con todo el código
+opt
+' 
+1. postman entorno de pruebas
+2. probar el api key de gate away
+   
+[11:25, 18/01/2025] María: https://hsx2nm4jc7.execute-api.us-east-1.amazonaws.com/dev/user?user_id=1
+[11:26, 18/01/2025] María: x-api-key R9FIuyosto3AmsztVyqrh9qSnLJklJQh1BUrc7yn
+
+
+
+4. swagger donde se explica de forma bonita los métodos
+
+
+
+edit : preferences : deshabilitar safe updates
+
+logging.info para que aparezca en los logs un mensaje
+
+
