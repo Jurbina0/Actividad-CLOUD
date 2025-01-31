@@ -1,0 +1,214 @@
+openapi: "3.0.1"
+info:
+  title: "User and Properties API"
+  description: "REST API for managing users, favorite properties, and property listings."
+  version: "1.0.0"
+servers:
+- url: "https://hsx2nm4jc7.execute-api.us-east-1.amazonaws.com/{basePath}"
+  variables:
+    basePath:
+      default: "dev"
+paths:
+  /all_properties:
+    get:
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ArrayOfMODEL94b96c"
+  /user:
+    get:
+      parameters:
+      - name: "user_id"
+        in: "query"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MODELe76e69"
+    put:
+      parameters:
+      - name: "user_id"
+        in: "query"
+        required: true
+        schema:
+          type: "string"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MODELbdad0d"
+        required: true
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MODELd1898c"
+    delete:
+      parameters:
+      - name: "user_id"
+        in: "query"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MODELe20678"
+  /all_users:
+    get:
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ArrayOfMODELcf5cf4"
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MODEL2dd992"
+        required: true
+      responses:
+        "201":
+          description: "201 response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MODEL126cc6"
+  /properties:
+    get:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MODEL3fdbf7"
+        required: true
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ArrayOfMODEL34e674"
+  /property:
+    get:
+      parameters:
+      - name: "property_id"
+        in: "query"
+        required: true
+        schema:
+          type: "string"
+    delete:
+      parameters:
+      - name: "property_id"
+        in: "query"
+        required: true
+        schema:
+          type: "string"
+  /favorite_properties:
+    get:
+      parameters:
+      - name: "user_id"
+        in: "query"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ArrayOfMODELd6bcb1"
+    put:
+      parameters:
+      - name: "user_id"
+        in: "query"
+        required: true
+        schema:
+          type: "string"
+      - name: "id_vivienda"
+        in: "query"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "201":
+          description: "201 response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MODELb7cb55"
+    post:
+      parameters:
+      - name: "user_id"
+        in: "query"
+        required: true
+        schema:
+          type: "string"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MODEL7de55e"
+        required: true
+      responses:
+        "201":
+          description: "201 response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MODEL87ba46"
+components:
+  schemas:
+    MODEL7de55e:
+      type: "object"
+    MODELb7cb55:
+      type: "object"
+    MODELe20678:
+      type: "object"
+    MODEL2dd992:
+      type: "object"
+    MODEL126cc6:
+      type: "object"
+    MODELe76e69:
+      type: "object"
+    ArrayOfMODELd6bcb1:
+      type: "array"
+      items:
+        type: "object"
+    ArrayOfMODEL94b96c:
+      type: "array"
+      items:
+        type: "object"
+    MODEL3fdbf7:
+      type: "object"
+    MODELbdad0d:
+      type: "object"
+    ArrayOfMODEL34e674:
+      type: "array"
+      items:
+        type: "object"
+    MODEL87ba46:
+      type: "object"
+    ArrayOfMODELcf5cf4:
+      type: "array"
+      items:
+        type: "object"
+    MODELd1898c:
+      type: "object"
